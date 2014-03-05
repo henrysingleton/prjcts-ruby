@@ -1,4 +1,7 @@
 PrjctsRuby::Application.routes.draw do
+  get "topics/new"
+  get "topics/create"
+  get "topics/vote"
   #get "sessions/new"
   
   get 'signup', to: 'users#new', as: 'signup'
@@ -7,6 +10,7 @@ PrjctsRuby::Application.routes.draw do
   
   resources :users
   resources :sessions
+  resources :topics
 
   get "users/new"
   # The priority is based upon order of creation: first created -> highest priority.
