@@ -6,8 +6,12 @@ class TopicsController < ApplicationController
 
   def create
     @topic = Topic.new(topic_params)
-    @topic.save
-    render "new"
+    if @topic.save
+      # Redirects to "index"
+      redirect_to topics_url, notice: "Thank you for signing up!"
+    else 
+      render "new"
+    end
   end
 
   def topic_params
@@ -20,4 +24,9 @@ class TopicsController < ApplicationController
 
   def vote
   end
+  
+  def index
+    @topics = Topic.all
+  end
+
 end
