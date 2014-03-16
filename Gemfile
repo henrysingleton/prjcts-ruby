@@ -43,3 +43,15 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Facebook-backed authentication
+gem 'omniauth-facebook'
+
+# Use foreman to manage local dev environment 
+gem 'foreman'
+
+# Use 12factor for static asset serving, but onlu when in production on Heroku 
+gem 'rails_12factor', group: :production
+
+# Heroku recommends unicorn as the web server to use. Note this is also specified in the Procfile
+gem 'unicorn'

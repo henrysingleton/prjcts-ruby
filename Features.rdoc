@@ -1,0 +1,34 @@
+## Prjcts 1.0
+
+### Features
+
+- Authenticate using your Facebook account
+- Create a project group, and add users to it
+- Users can submit theme suggestions at any time
+- Each month, a new theme is randomly chosen from all the as yet not done themes, and a date is set for the presentation of that month's theme
+- Once a theme has been chosen, each user must nominate a topic. The first person to nominate a topic gets to do that topic, so its a good idea to do this as soon as possible. 
+- Each user can upload photos, assets for their project. 
+- Users are emailed weekly to remind them how many days they have left before their project is due. 
+- Currently there is no judging of entries, though comments can be made on each project. 
+
+### Controllers
+- Users
+	- Create
+	- List
+	- Delete
+	- Edit/update? 
+- Themes
+- Topics
+- Projects
+
+
+### Models
+- Users
+- Themes
+- Topics
+- Projects
+- Comments
+
+### Authentication
+A super admin can modify user accounts but that is the only advanced power they have. 
+Users can remove their own projects, topics and theme suggestions, but cant modify others. 
