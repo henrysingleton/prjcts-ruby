@@ -19,3 +19,4 @@
 .DS_Store
 
 # Ignore actual .env file. Look at the .env.example file to see a sample of what should be in that file. 
+.env
