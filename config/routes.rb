@@ -7,7 +7,13 @@ PrjctsRuby::Application.routes.draw do
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+ 
+  # Not using this as its really a duplicate of the above. 
+  #get 'signout', to: 'sessions#destroy', as: 'signout'
   
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+
   resources :users
   resources :sessions
   resources :topics
@@ -18,6 +24,11 @@ PrjctsRuby::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+  
+  
+  
+
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
